@@ -158,9 +158,15 @@ deleteBtn.addEventListener('click', () => {
 })
 
 checkBtn.addEventListener('click', () => {
+    if (myTasks[0].done) {
     myTasks.forEach(item => {
-        item.done ? item.done = false : item.done = true
+        item.done = false
     })
+    } else {
+        myTasks.forEach(item => {
+            item.done = true
+        })
+    }
     sortTask()
 })
 
