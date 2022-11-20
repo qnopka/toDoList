@@ -45,12 +45,18 @@ function createTaskItem(item) {
 
     const deleteTask = document.createElement("div");
     deleteTask.classList.add('delete')
-    deleteTask.classList.add('hidden')
+    if (window.screen.width > 992) {
+        deleteTask.classList.add('hidden')
+    }
+
     deleteTask.innerHTML = '<i class="fas fa-trash-alt"></i>'
 
     const editTask = document.createElement("div");
     editTask.classList.add('edit')
-    editTask.classList.add('hidden')
+    if (window.screen.width > 992) {
+        editTask.classList.add('hidden')
+    }
+
     editTask.innerHTML = '<i class="fas fa-pen"></i>'
 
     tasks.append(taskBlock)

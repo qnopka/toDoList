@@ -13,10 +13,6 @@ main {
     margin: 50px;
 }
 
-h1 {
-    color: #2666a2;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -24,10 +20,16 @@ h1 {
     align-items: center;
 }
 
+.add-container {
+    display: flex;
+    width: 100%;
+}
+
 .block__tasks {
-    margin: 20px 0;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
+    /*align-items: center;*/
 }
 
 .input {
@@ -36,6 +38,7 @@ h1 {
     border: 1px solid #52abff;
     border-radius: 10px;
     background: white;
+    margin-right: 5px;
 }
 
 input::placeholder {
@@ -116,5 +119,21 @@ input::placeholder {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .input {
+        max-width: 200px;
+    }
+    .task {
+        width: 285px;
+    }
+
+    .task-block {
+        width: 255px;
+    }
+    .btn-block {
+        width: 100%;
     }
 }
